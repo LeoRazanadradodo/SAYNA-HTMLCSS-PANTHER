@@ -1,0 +1,780 @@
+/* Annulation de toutes les marges */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+ }
+
+
+/* Import font */
+
+/*font-family: 'Cantarell', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+
+/*font local ;*/
+@font-face {
+    font-family: Beyno;
+    src: url(../fonts/BEYNO.ttf);
+ }
+
+ @font-face {
+    font-family: Panthera;
+    src: url(../fonts/PantheraRegular.ttf);
+ }
+
+ @font-face {
+    font-family: Wakanda;
+    src: url(../fonts/wakandaforever-regular.ttf);
+ }
+
+/* Variable des couleurs */
+:root {
+    --blanc: #ffffff;  
+    --rose: #F2CEF2;
+    --gris-rose: #9E91B7;
+    --roseviolet: #DF99F2;
+    --violet: #3D2DA6;
+    --bleu: #07338C;
+    --night: #021740;
+    --night-trans: rgba(2, 23, 64, 0.81);
+    --blanc-degrad: linear-gradient(180deg, rgb(254, 255, 255) 0%, rgba(255, 255, 255, 0.1) 52%);
+    --bleu-degrad: linear-gradient(90deg, rgb(2, 23, 64),rgba(255, 255, 255, 0));
+}
+
+/* Annulation style de tous les liens et liste à puce */
+a {
+    text-decoration: none;
+    color: var(--blanc);
+}
+
+li {
+    list-style-type: none;
+}
+
+
+/* Arriere plan body */
+body {
+    background-image: url(../images/all-pages/arrière_plan.png);
+    background-repeat: repeat-y;
+    background-size: cover;
+    color: var(--blanc);
+    font-family: 'Cantarell', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: justify;
+    line-height: 20px;
+}
+
+/* Design Social media Navbar */
+.nav-social-fixed {
+    position: fixed;
+    top: 0;
+    left: 3%;
+    display: flex;
+    z-index: 100;
+}
+
+.nav-social-fixed .line {
+    width: 3px;
+    height: auto;
+    background-color: var(--gris-rose);
+}
+
+.nav-social-fixed .line:last-of-type {
+    height: 295px;
+}
+
+.nav-social-fixed .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-social-fixed .social a {
+    margin: 5px 10px;
+}
+
+.nav-social-fixed .social a:first-of-type {
+    margin-top: 15px;
+}
+
+.nav-social-fixed .social a:last-of-type {
+    margin-bottom: -6px;
+}
+
+.nav-social-fixed img {
+    transition: filter 0.5s;
+}
+
+.nav-social-fixed a:hover img {
+    filter: brightness(2);
+}
+
+/* Design du menu site */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10% 30px;
+    font-family: Beyno, sans-serif;
+    font-size: 16px;
+}
+
+
+.navbar .logo-top:hover img{
+    filter: invert(25%) sepia(12%) saturate(684%) hue-rotate(219deg) brightness(90%) contrast(86%);
+}
+
+
+
+.navbar .menu-top {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .menu-top li {
+    margin: 0 30px;
+}
+
+.navbar .menu-top a:hover {
+    text-decoration: underline;
+}
+
+.navbar .menu-top a.active {
+    transition: color 0.5s;
+    color: var(--gris-rose);
+    text-decoration: underline;
+}
+
+.navbar .menu-top a.active:hover {
+    color: var(--blanc);
+}
+
+/* Design Hero banner */
+.accueil .hero-banner .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accueil .hero-banner .container .text {
+    width: 35%;
+    margin-left: 12%;
+}
+
+.accueil .hero-banner .container .illustration {
+    width: 65%;
+}
+
+.accueil .hero-banner .container .illustration img {
+    max-width: 100%;
+}
+
+.accueil .hero-banner h1 {
+    font-family: Panthera, sans-serif;
+    text-transform: uppercase;
+    font-size: 58px;
+    font-weight: normal;
+    color: var(--gris-rose);
+    line-height: initial;
+}
+
+.hero-banner h2 {
+    font-family: Beyno, sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    color: var(--gris-rose);
+    margin: 15px 0px 20px;
+}
+
+.btn-more {
+    display: inline-block;
+    border-bottom: 1px solid var(--blanc);
+    margin-top: 10px;
+}
+
+
+/* Design Slider */
+.slider .container {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.slider .container .items {
+    background: var(--bleu);
+    display: flex;
+    height: 240px;
+    justify-content: space-between;
+}
+
+.slider .container .items:first-of-type {
+    padding-left: 25px;
+}
+
+.slider .container .items .zoom {
+    display: flex;
+    align-items: center;
+}
+
+.slider .container .items .thumbnail img {
+    height: 240px
+}
+
+.slider .container .items .text {
+    padding: 35px 25px 0px;
+    width: 23vw;
+}
+
+.slider .container .items .zoom img {
+    height: 300px;
+}
+
+.slider .container .items h2, .content article h2 {
+    font-family: 'Beyno';
+    font-weight: normal;
+    color: var(--gris-rose);
+    margin-bottom: 10px;
+}
+
+.slider .btn-next {
+    position: absolute;
+    right: 1.5%;
+}
+
+.slider .btn-next a {
+    display: inline-block;
+    background: var(--bleu);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 100%;
+}
+
+/* Design Article & Sidebar */
+.accueil .content {
+    display: flex;
+    justify-content: space-between;
+    margin: 150px 10% 0px 13%;
+}
+
+.accueil .content article {
+    width: 53%;
+}
+
+.accueil .content article h2 {
+    margin-top: 20px;
+}
+
+.accueil .content article p {
+    padding: 2px 0px 15px;
+}
+
+.sidebar {
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: -40px;
+}
+
+.sidebar .card {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .card .thumbnail {
+    width: 75%;
+    position: relative;
+    z-index: 100;
+}
+
+.sidebar .card .thumbnail img {
+    max-width: 100%;
+}
+
+.sidebar .card .text {
+    background: var(--blanc);
+    color: var(--night);
+    padding: 55% 15% 25%;
+    position: relative;
+    top: -20%;
+    border-radius: 10px;
+}
+
+.sidebar .card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sidebar .card .tchalla {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px 25px;
+} 
+
+.sidebar .card .tchalla .btn {
+    background: var(--violet);
+    padding: 4px 13px;
+    border-radius: 4px;
+    color: var(--blanc);
+    font-size: 10px;
+}
+
+.sidebar .card .text > p {
+    font-size: 13px;
+    padding-bottom: 7px;
+}
+
+.sidebar .card .gras {
+    font-weight: bold;
+}
+
+.sidebar > .thumbnail {
+    position: relative;
+    top: -60px;
+}
+
+/* Design Formulaire de contact */
+.contact {
+    position: relative;
+    background: url(../images/accueil/Pantherhome7.png) no-repeat;
+    background-size: contain;
+    text-align: center;
+    color: var(--night);
+    font-size: 15px;
+    padding: 124px 0px 200px;
+}
+
+.contact-form {
+    background: var(--blanc-degrad);
+    width: 50%;
+    margin: 0 auto;
+    padding: 70px 175px;
+    border-radius: 20%;
+}
+
+.contact .contact-form h2 {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    font-size: 36px;
+}
+
+.contact .contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 1px solid var(--night);
+    background: transparent;
+}
+
+.contact input::placeholder, .contact textarea::placeholder {
+    color: var(--night);
+}
+
+.contact textarea {
+    height: 145px;
+    resize: none;
+}
+
+.contact .btn {
+    background: var(--gris-rose);
+    padding: 10px 35px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+}
+
+.contact .btn:hover {
+    box-shadow: 0px 0px 20px var(--night);
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: var(--night);
+    height: 148px;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+    z-index: 100;
+    background: var(--bleu);
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    opacity: 0.1;
+}
+
+/* Popup design */
+
+.popup {
+    position: fixed;
+    padding: 40px;
+    max-width: 45%;
+    border-radius: 0.5em;
+    top: 50%;
+    left: 50%;
+    color: var(--night);
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,1);
+    visibility: hidden;
+    color: var(--night);
+    opacity: 0;
+    z-index: 1;
+ }
+
+ .popup h2 {
+    font-family: Beyno;
+    margin-bottom: 10px;
+    color: var(--violet);
+ }
+
+ .popup:target {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s, visibility 0s linear .5s;
+ }
+ .popup .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 5px;
+    color: var(--night);
+    transition: color .3s;
+    font-size: 2em;
+    line-height: 1.5;
+    font-weight: 700;
+ }
+ .popup .close:hover {
+    color: #f00;
+ }
+ .close-popup {
+    background-color: var(--night-trans) ;
+    cursor: default;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility 0s linear .5s;
+ }
+ .popup:target + .close-popup {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+ }
+
+
+/* Design footer */
+
+footer {
+    background: url(../images/all-pages/back_footer.png) no-repeat;
+    background-size: cover;
+    padding: 190px 0px 51px 0px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 15% 0 20%;
+}
+
+.logo-bottom {
+    position: relative;
+    transition: scale .3s;
+}
+
+.logo-bottom:hover {
+    scale: 110%;
+}
+
+.logo-bottom .sayna-marvel {
+    position: absolute;
+    top: 40%;
+    left: 28%;
+}
+
+footer .text {
+    width: 55%;
+}
+
+footer .navbottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbottom h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+}
+
+.navbottom li {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.pages a:hover {
+    text-decoration: underline;
+}
+
+.navbottom .social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbottom .social .btn {
+    transition: scale 0.5s;
+}
+
+.navbottom .social .btn:hover {
+    scale: 110%;
+}
+
+footer .credit {
+    margin-top: 110px;
+}
+
+.credit .rond {
+    background: var(--blanc);
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    margin: 0px 5px 2px;
+}
+
+
+/* Design page wakanda */
+.wakanda .navbar {
+    background: var(--bleu-degrad);
+}
+
+.wakanda .hero-banner {
+    background: url(../images/wakanda/Pantherwakanda1.png) no-repeat;
+    background-size: cover;
+    padding: 255px 0px;
+}
+
+.wakanda .hero-banner .text {
+    width: 35%;
+    margin-left: 12%;
+}
+
+.wakanda .hero-banner h1 {
+    font-family: Beyno, sans-serif;
+    font-weight: normal;
+    font-size: 50px;
+    color: var(--gris-rose);
+}
+
+.wakanda .hero-banner h2 {
+    font-family: wakanda, sans-serif;
+    font-weight: normal;
+    color: var(--gris-rose);
+    font-size: 38px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.wakanda .hero-banner p {
+    width: 65%;
+}
+
+.wakanda .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 7% 12%;
+    background: url(../images/wakanda/Pantherwakanda2.png) no-repeat;
+    background-size: contain;
+}
+
+.wakanda .content .colonne {
+    width: 45%;
+}
+
+.wakanda .content h2 {
+    font-family: 'Beyno';
+    font-weight: normal;
+    color: var(--gris-rose);
+    padding-top: 25px;
+    padding-bottom: 5px;
+}
+
+.wakanda .content p {
+    padding-top: 20px;
+}
+
+.wakanda .content .video {
+    margin: 40px 0px;
+    display: block;
+    width: 100%;
+    height: 210px;
+}
+
+.wakanda .content img {
+    max-width: 100%;
+    margin: 25px 0px;
+}
+
+
+/* Design page enigme */
+.enigme-page .hero-banner .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.enigme-page .hero-banner .container .illustration {
+    width: 100%;
+    opacity: 0.4;
+}
+
+.enigme-page .hero-banner .container .illustration img {
+    max-width: 100%;
+}
+
+.enigme-page .hero-banner h1 {
+    display: inline-block;
+    font-family: 'Beyno';
+    font-weight: normal;
+    color: var(--gris-rose);
+    padding-top: 45px;
+    padding-bottom: 5px;
+    font-size: 55px;
+    line-height: 72px;
+    text-align: justify;
+}
+
+.letter-space {
+    letter-spacing: 5px;
+}
+
+.enigme-page .hero-banner p {
+    background: url(../images/enigme/Pantherenigme2.png) no-repeat;
+    background-size: cover;
+    padding: 150px 120px 80px 120px;
+    margin: 0px 12% 0px 0px;
+}
+
+.enigme-page .hero-banner .text {
+    background: url(../images/enigme/Pantherenigme3.png) no-repeat;
+    background-position: bottom;
+}
+
+.enigme-page .enigme, .enigme-page .transcription, .enigme-page .reponse {
+    margin: 0 10% 0 12%;
+}
+
+.enigme-page .enigme {
+    padding-top: 70px;
+    font-family: wakanda, sans-serif;
+    font-weight: normal;
+    color: var(--gris-rose);
+    font-size: 23px;
+    line-height: 40px;
+    margin-bottom: 50px;
+}
+
+.enigme-page .transcription {
+    display: flex;
+    justify-content: space-between;
+}
+
+.enigme-page .transcription .colonne {
+    width: 100%;
+}
+
+.enigme-page .title {
+    padding-bottom: 15px;
+}
+
+.enigme-page .alpha {
+    font-size: 14px;
+}
+
+.enigme-page .transcri {
+    font-family: wakanda, sans-serif;
+    font-size: 20px;
+}
+
+.enigme-page .question {
+    background: url(../images/enigme/Pantherenigme2.png) no-repeat;
+    background-size: cover;
+    padding: 103px 90px 120px 90px;
+    margin: 0;
+    text-align: center;
+    background-position: right;
+}
+
+.enigme-page .reponse form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+
+.enigme-page .reponse textarea {
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    border-radius: 30px;
+    border: 1px solid var(--gris-rose);
+    background: transparent;
+    color: var(--gris-rose);
+    resize: none;
+    padding-left: 20px;
+}
+
+.enigme-page .reponse button {
+    background: var(--gris-rose);
+    padding: 10px 35px;
+    margin: 70px auto 150px;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--night);
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+}
+
+.enigme-page .reponse button:hover {
+    box-shadow: 0px 0px 20px var(--gris-rose);
+}
