@@ -1,0 +1,155 @@
+@media only screen and (max-width: 1200px) {
+    .nav-social-fixed .line:last-of-type {
+        height: 150px;
+    }
+
+    .navbar {
+        font-size: 14px;
+    }
+       
+
+    .accueil .hero-banner .container .text {
+        width: 40%;
+        margin-left: 10%;
+    }
+    
+    .accueil .hero-banner .container .illustration {
+        width: 60%;
+    }
+
+    .accueil .hero-banner h1 {
+        font-size: 35px;
+    }
+
+    .hero-banner h2 {
+        font-size: 21px;
+    }
+
+    /* Design Slider */
+    .slider .container {
+        margin-top: 75px;
+        justify-content: center;
+        background: var(--bleu);
+    }
+
+    .slider .container .items {
+    }
+
+    .slider .container .items:nth-child(3) {
+        display: none !important;
+    }
+
+    .slider .container .items:nth-child(2) .text {
+        display: none !important;
+    }
+
+    .slider .container .items .zoom {
+        display: flex;
+        align-items: center;
+    }
+
+    .slider .container .items .text {
+        padding: 15px 15px 0px;
+        width: 35vw;
+    }
+
+    .slider .container .items h2, .content article h2 {
+        font-size: 16px;
+    }
+
+    .slider .btn-next a {
+        background: var(--night);
+    }
+
+    /* Design Article & Sidebar */
+    .accueil .content {
+    display: flex;
+    flex-direction: column;
+    margin: 75px 10% 0px 10%;
+    }
+
+    .accueil .content article {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar .card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .sidebar .card .text {
+        width: 50%;
+        padding: 30px 20px;
+    }
+
+    .sidebar .card .thumbnail {
+        width: 50%;
+    }
+
+    .sidebar > .thumbnail {
+        display: none;
+    }
+
+
+    /* Design Formulaire de contact */
+    .contact {
+        background: var(--night);
+        font-size: 14px;
+        padding: 75px 0px 100px;
+    }
+
+    .contact-form {
+        width: 80%;
+        padding: 70px 75px;
+    }
+
+    .contact .contact-form h2 {
+        font-size: 26px;
+    }
+
+    .contact input, .contact textarea {
+        color: var(--night);
+        margin-bottom: 13px;
+        font-family: 'Cantarell', sans-serif;
+    }
+
+    .contact::after {
+        display: none;
+    }
+
+    /* Design footer */
+
+    footer {
+        padding: 100px 0px 51px;
+    }
+
+    footer .container {
+        margin: 0px 10%;
+    }
+
+    .logo-bottom {
+        scale: 70%;
+    }
+
+    .logo-bottom:hover {
+        scale: 80%;
+    }
+
+    footer .text {
+        width: 60%;
+    }
+    .navbottom h2 {
+        letter-spacing: 5px;
+        font-size: 16px;
+    }
+
+}
