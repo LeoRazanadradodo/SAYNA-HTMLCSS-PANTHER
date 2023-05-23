@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLACK PANTHER | Wakanda forever</title>
     <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <link rel="stylesheet" href="./Assets/CSS/responsive.css">
 </head>
 <body class="enigme-page">
 <!-- Header du site -->   
@@ -71,9 +72,15 @@
             <p class="title">Alors, as tu la réponse ?</p>
             <form action="">
                 <textarea name="" id="" cols="30" rows="10">Réponse</textarea>
-                <button type="submit">Envoyer</button>
+                <button type="submit"><a href="#popup" class="btn">Envoyer</a></button>
             </form>
-        </section>        
+        </section> 
+        <div id="popup" class="popup">
+            <a href="#" class="close">&times;</a>
+            <h2>Reponse bien recu</h2>
+            <p>Merci pour votre participation</p>
+         </div>
+         <a href="#" class="close-popup"></a>       
     </main>
     <footer id="bottom">
         <div class="container">

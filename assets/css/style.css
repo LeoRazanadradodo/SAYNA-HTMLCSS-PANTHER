@@ -405,7 +405,7 @@ body {
     resize: none;
 }
 
-.contact .btn {
+.contact button {
     background: var(--gris-rose);
     padding: 10px 35px;
     margin-top: 10px;
@@ -418,7 +418,7 @@ body {
     transition: box-shadow 0.5s;
 }
 
-.contact .btn:hover {
+.contact button:hover {
     box-shadow: 0px 0px 20px var(--night);
 }
 
